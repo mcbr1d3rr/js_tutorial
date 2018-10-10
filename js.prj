@@ -16,6 +16,8 @@ Create Tagfile=0
 CTags Legacy Support=0
 [FilesU]
 0=index.html
+1=hello.js
+2=hello
 [uemakeXp]
 ReleaseMode=0
 [Debug Settings]
