@@ -1,14 +1,47 @@
 // palindrome.js
 
-// reverses a string
+// fn: reverse()
+// description: reverses a string
+// input: string
+// return: reversed string
 function reverse(string)
 {
   return Array.from(string).reverse().join("");
 }
 
-// returns true for a palindrome, false otherwise
-function palindrome(string)
+// fn Phrase()
+// description: defines a palindrome Phraase object,
+// includes palindrome function into the Phrase object as a method
+// input: content
+function Phrase(content)
 {
-  let processedContent = string.toLowerCase();
-  return processedContent === reverse(processedContent);
+  this.content = content;
+
+  // Returns content processed for palindrome testing.
+  this.processedContent = function processedContent()
+  {
+    return this.content.toLowerCase();
+  }
+
+  // Returns true if the phrase is a palindrome, false otherwise.
+  this.palindrome = function palindrome()
+  {
+    return this.processedContent() === reverse(this.processedContent());
+  }
 }
+
+// Defines a TranslatedPhrase object.
+function TranslatedPhrase(content, translation)
+{
+  this.content = content;
+  this.translation = translation;
+
+  // Returns translation processed for palindrome testing.
+  this.processedContent = function processedContent()
+  {
+    return this.translation.toLowerCase();
+  }
+}
+
+// translatedPhrase now inherits all methods of Phrase instance.
+TranslatedPhrase.prototype = new Phrase();
