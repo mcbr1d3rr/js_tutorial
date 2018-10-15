@@ -1,13 +1,11 @@
 // palindrome.js
 
-// fn: reverse()
-// description: reverses a string
-// input: string
+// description: add reverses to String properties
 // return: reversed string
 // Reverses a string.
-function reverse(string)
+String.prototype.reverse = function ()
 {
-  return Array.from(string).reverse().join("");
+  return Array.from(this).reverse().join("");
 }
 
 // fn Phrase()
@@ -28,10 +26,11 @@ function Phrase(content)
   // Returns true if the phrase is a palindrome, false otherwise.
   this.palindrome = function palindrome()
   {
-    return this.processedContent() === reverse(this.processedContent());
+    return this.processedContent() === this.processedContent().reverse();
   }
 }
 
+/* removed as not needed for palindrome
 // fn TranslatedPhrase()
 // description: Defines a TranslatedPhrase object.
 // input: content
@@ -51,3 +50,4 @@ function TranslatedPhrase(content, translation)
 
 // translatedPhrase now inherits all methods of Phrase instance.
 TranslatedPhrase.prototype = new Phrase();
+*/
