@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/mcbr1d3rr/js_tutorial/issues"
   },
-  "homepage": "https://github.com/mcbr1d3rr/js_tutorial#readme"
+  "homepage": "https://github.com/mcbr1d3rr/js_tutorial#readme",
+  "dependencies": {
+    "rmcbride-palindrome": "^0.1.2"
+  }
 }
